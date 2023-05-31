@@ -34,6 +34,10 @@ export const Calculator = ({resultsList, setResultsList}) => {
 
   const evaluateResult = (e) => {
     e.preventDefault();
+    if(operation==="Syntax Error" || operation[0]==="="){
+      return;
+    }
+    
     const result = String(evaluateOperation(operation));
     if (result!=="Syntax Error" && operation!==result){
       setResultsList([...resultsList, {operation,result}])
@@ -46,7 +50,7 @@ export const Calculator = ({resultsList, setResultsList}) => {
   },[operation]);
 
   return (
-    <div className="max-w-xs w-full mb-5 bg-blue-500 p-4">
+    <div className="max-w-xs w-full mb-5 p-4 bg-cyan-800">
       <form onSubmit={evaluateResult}>
 
         <input
@@ -73,8 +77,9 @@ export const Calculator = ({resultsList, setResultsList}) => {
             type="submit"
             value="="
             className="cursor-pointer col-span-2
-              bg-green-500 m-1 rounded-full
-              text-4xl font-bold"
+              bg-cyan-500 m-1 rounded-full pb-2
+              text-4xl font-bold text-white
+              active:bg-cyan-200 active:text-black"
           />
         </div>
       </form>
