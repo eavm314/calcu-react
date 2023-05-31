@@ -1,7 +1,7 @@
 export const NavBar = () => {
     return (
-      <div className="bg-green-600 w-full py-2 fixed top-0">
-          <h1 className="text-2xl text-white text-center">
+      <div className="bg-emerald-800 w-full py-2 sticky">
+          <h1 className="text-4xl text-white text-center">
               CalcuJS
           </h1>
       </div>

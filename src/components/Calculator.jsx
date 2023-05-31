@@ -50,7 +50,8 @@ export const Calculator = ({resultsList, setResultsList}) => {
   },[operation]);
 
   return (
-    <div className="max-w-xs w-full mb-5 p-4 bg-cyan-800">
+    <div className="max-w-xs w-full mb-5 p-4 pt-8 
+      bg-cyan-800 rounded-lg">
       <form onSubmit={evaluateResult}>
 
         <input
@@ -58,16 +59,16 @@ export const Calculator = ({resultsList, setResultsList}) => {
           type="text"
           value={operation}
           readOnly
-          className="outline-none
-        w-full py-1 px-2 mb-4
-        border-2 border-black 
-        text-right text-2xl" />
+          className="outline-none w-full py-1 px-2 mb-4
+            border-2 border-black bg-slate-200
+            text-right text-3xl" />
 
-        <Button text={"D"} handler={deleteSymbol}/>
+        <Button text={"Clear"} handler={clearInput} 
+          className="bg-red-500 px-4 text-xl"/>
 
         <div className="grid grid-cols-4 grid-rows-5">
 
-          <Button text="C" handler={clearInput} />
+          <Button text="Del" handler={deleteSymbol} className="text-xl" />
           {
             textButtons.map((b, i) =>
               <Button key={i} text={b} handler={concatSimbol} />

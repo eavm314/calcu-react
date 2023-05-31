@@ -1,10 +1,11 @@
 export const RecordItem = ({operation, result}) => {
   return (
-    <div className="text-end bg-lime-500 rounded-lg py-1 px-3 my-3">
-        <p className="text-sm">
+    <div className="bg-green-700 rounded-lg py-1 px-3 my-3 
+      text-slate-100 text-end">
+        <p className="text-base">
             {operation}
         </p>
-        <p className="text-xl">
+        <p className="text-2xl font-semibold">
             {"="+result}
         </p>
     </div>

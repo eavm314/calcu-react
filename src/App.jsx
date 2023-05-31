@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <NavBar/>
-      <div className='m-5 mt-16 flex flex-col items-center
+      <div className='m-5 mt-10 flex flex-col items-center
         md:flex-row md:justify-evenly md:items-start'>
         <Calculator resultsList={resultsList} setResultsList={setResultsList}/>
         <Record resultsList={resultsList} setResultsList={setResultsList}/>
